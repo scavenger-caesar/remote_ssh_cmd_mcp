@@ -76,6 +76,7 @@ class RemoteShellDevSkills(MCPMixin):
         )   
         network_service = NetworkService(
             target=target,
+            name=f"network_{address}",
             address=address,
             username=username,
             password=password,
@@ -83,6 +84,7 @@ class RemoteShellDevSkills(MCPMixin):
         )
         ssh_driver = SSHDriver(
             target=target,
+            name=f"ssh_{address}",
         )
         ssh_driver.target = target
 
